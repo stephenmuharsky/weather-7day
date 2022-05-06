@@ -1,0 +1,37 @@
+.temps {
+  position: relative;
+  bottom: 30px;
+}
+
+#weather2 {
+  position: relative;
+  bottom: 60px;
+}
+
+.hour-element:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#icon {
+  position: relative;
+  bottom: 36px;
+}
+
+.hour-element {
+  height: 10rem;
+}
+
+#tempmax {
+  position: relative;
+  bottom: 75px;
+}
+
+.temp {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.hour {
+  position: relative;
+  bottom: 10px;
+}

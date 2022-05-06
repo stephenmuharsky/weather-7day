@@ -1,0 +1,147 @@
+.main-container {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 500px;
+  color: white;
+  margin-bottom: 0;
+  position: relative;
+  bottom: 1rem;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+.temp {
+  margin-top: 0;
+  /* background-color: orange; */
+  position: relative;
+  top: 15px;
+}
+
+.location {
+  margin-bottom: 0;
+  font-size: 3rem;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.units-container {
+  width: 15px;
+  text-align: left;
+  position: relative;
+  top: 30px;
+  right: 40px;
+}
+
+.unit {
+  text-align: left;
+  position: relative;
+  right: 100px;
+  z-index: 4;
+}
+
+.bottom {
+  margin-top: 0;
+  position: relative;
+  bottom: 4rem;
+  margin-bottom: 0;
+}
+
+.icons {
+  margin-top: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0;
+}
+
+.description {
+  margin-bottom: 0;
+}
+
+.timestamp {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.icon-element {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#top-icons {
+  position: relative;
+  left: 1.5rem;
+}
+
+#wind {
+  position: relative;
+  right: 3rem;
+}
+
+#visibility {
+  position: relative;
+  right: 5rem;
+}
+
+#humidity {
+  position: relative;
+  right: 1rem;
+}
+
+#dew {
+  position: relative;
+  right: 2rem;
+}
+
+.bottom-icons {
+  padding: 25px;
+  /* background: cyan; */
+}
+
+.background {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  right: 4rem;
+  bottom: 6.5rem;
+  z-index: -1;
+  /* background: green;  */
+}
+
+.inactive:hover {
+  cursor: pointer;
+}
+
+.active {
+  position: relative;
+}
+
+.inactive {
+  position: relative;
+  bottom: 25px;
+}
+
+#F:hover .background {
+  background: green;
+}
+
+.main-image {
+  width: 40%;
+}
+
+.weather-icon {
+  /* position: relative;
+  left: 5rem;
+  object-fit: cover;
+  background-size: cover; */
+  width: 250px;
+}

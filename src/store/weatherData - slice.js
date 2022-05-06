@@ -5,11 +5,13 @@ const weatherSlice = createSlice({
   initialState: {
     data: null,
     received: false,
+    currentWeather: null,
   },
   reducers: {
     replaceData(state, action) {
       state.data = action.payload.data;
       state.received = true;
+      state.currentWeather = action.payload.data.current.weather[0].icon;
     },
   },
 });

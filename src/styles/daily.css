@@ -1,0 +1,29 @@
+.main-container-daily {
+  color: white;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  width: 140%;
+  /* text-align: left; */
+  position: relative;
+  bottom: 2.5rem;
+}
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+}
+
+.rec.rec-dot {
+  visibility: hidden;
+}
+
+.title-daily {
+  font-size: 2rem;
+  position: relative;
+  right: 12rem;
+}

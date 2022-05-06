@@ -16,14 +16,15 @@ const useGeoLocation = () => {
   const reverseGeoCoding = (lat, lon) => {
     //const dispatch = useDispatch();
     //const [cityName, setCityName] = useState("");
-    console.log(`lat ${lat} lon ${lon}`);
+    //console.log(`lat ${lat} lon ${lon}`);
     //20.2114185 -87.46535019999999
+
     let url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lon}&key=AIzaSyCv30vijnE_hnWctAFjspNXbVemYFEwZsE`;
 
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         let parts = data.results[0].address_components;
         parts.forEach((part) => {
           if (part.types.includes("locality")) {
@@ -48,7 +49,7 @@ const useGeoLocation = () => {
     //     lng: location.coords.longitude,
     //   },
     // });
-    //console.log(location);
+
     dispatch(
       locationDataActions.setLocationData({
         lat: location.coords.latitude,

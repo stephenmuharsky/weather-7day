@@ -1,0 +1,25 @@
+.main-container-hourly {
+  color: white;
+  position: relative;
+  bottom: 1.5rem;
+  padding-left: 2rem;
+  width: 140%;
+}
+
+.rec.rec-dot {
+}
+
+.rec.rec-arrow {
+  background-color: transparent;
+  font-size: 1rem;
+}
+
+/* .rec.rec-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+} */
+
+.title-hourly {
+  font-size: 2rem;
+  position: relative;
+  right: 12rem;
+}

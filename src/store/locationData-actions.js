@@ -1,7 +1,8 @@
 import { locationDataActions } from "./locationData-slice";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export const fetchLocationData = (locationName) => {
+  //const dispatch = useDispatch();
   //const locationName = useSelector((state) => state.locationName.name);
   //console.log("location name:", locationName);
   return async (dispatch) => {
@@ -16,8 +17,8 @@ export const fetchLocationData = (locationName) => {
 
     try {
       const locationData = await fetchHandler();
-      console.log("Location data:", locationData);
-      //dispatch(locationDataActions.setLocationData({}))
+      console.log("Location data!!!!:", locationData);
+      //dispatch(locationDataActions.setLocationData())
     } catch (err) {
       console.log("error?");
     }

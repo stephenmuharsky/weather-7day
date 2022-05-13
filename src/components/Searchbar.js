@@ -11,6 +11,7 @@ import PlacesAutocomplete, {
 } from "react-places-autocomplete";
 import "../styles/searchbar.css";
 import { locationCharsActions } from "../store/locationChars-slice";
+import { fetchWeatherData } from "../store/weatherData-actions";
 
 const Searchbar = () => {
   const [locationChars, setLocationChars] = useState("");
@@ -19,6 +20,7 @@ const Searchbar = () => {
   const locationName = useSelector((state) => state.locationName.name);
   const locationData = useSelector((state) => state.locationData);
   const locationCharss = useSelector((state) => state.locationChars);
+  const unit = useSelector((state) => state.units.unit);
 
   let inputRef = useRef();
   //search location
@@ -89,7 +91,12 @@ const Searchbar = () => {
 
   return (
     <div className="container">
-      <ReplayIcon className="reload-icon" />
+      <ReplayIcon
+        className="reload-icon"
+        // onClick={dispatch(
+        //   fetchWeatherData(locationData.lat, locationData.lon, unit)
+        // )}
+      />
       <PlacesAutocomplete
         value={locationCharss.chars}
         onSelect={handleSelect}

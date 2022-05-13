@@ -2,11 +2,8 @@
   display: flex;
   flex: 1;
   align-items: center;
-  /* border-radius: 24px; */
-  /* background-color: purple; */
   margin-right: 1.5rem;
   color: #d3d3d3;
-  /* background: rgba(0, 0, 0, 0.2); */
   width: 18rem;
   position: relative;
   left: 62rem;
@@ -16,6 +13,7 @@
 
 .search {
   width: 100%;
+  color: white;
 }
 
 .search-input {
@@ -36,7 +34,7 @@
   height: 34px !important;
   /* background: rgba(0, 0, 0, 0.1); */
   color: white;
-  margin-right: 5px;
+  margin-right: 0px;
 }
 
 .reload-icon:hover {
@@ -49,4 +47,11 @@
   z-index: 1000;
   background: cyan;
   width: 100%;
+  margin-bottom: 0;
+  color: black;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
 }

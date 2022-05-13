@@ -1,0 +1,157 @@
+.main-container-current-detail {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-left: 2.5rem;
+}
+
+.flex-container {
+  /* justify-content: space-between; */
+  /* position: relative; */
+  /* bottom: 1.5rem;
+  left: 1.5rem; */
+}
+
+.column-1 {
+  /* flex: 33%; */
+}
+
+.column2-2 {
+  /* flex: 66%; */
+}
+
+.line {
+  /* width: 80%;
+  margin-right: 10px; */
+}
+
+.line-2 {
+  /* width: 160%; */
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-bottom: 0.5rem;
+  margin-bottom: 5rem;
+}
+
+.time-subcontainer {
+  margin: 0;
+  margin-bottom: 0.25rem;
+  margin-top: 0rem;
+}
+
+.time-subcontainer:first-child {
+  margin-top: 0 rem;
+}
+
+.time-image-container {
+  width: 2rem;
+}
+.time-icon {
+  width: 2.25rem;
+  object-fit: cover;
+}
+.time-sub-subcontainer {
+  display: flex;
+  flex-direction: row;
+  width: 110%;
+}
+.time-text {
+  margin: 0;
+  font-size: 1.125rem;
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+}
+
+.time-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
+.progessbar-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.icon {
+  width: 45%;
+  color: white;
+}
+
+.progressbar {
+  /* width: 2rem; */
+}
+
+.progressbar-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  margin-left: 1rem;
+  width: 60%;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.progressbar-subcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progressbar-sub-subcontainer {
+  width: 6rem;
+  margin-top: 0;
+  color: white;
+  position: relative;
+  bottom: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.progressbar-subcontainer:first-child {
+  /* margin-right: 1rem; */
+}
+
+.progressbar-subcontainer:last-child {
+  margin-left: 1rem;
+}
+
+.progressbar-subcontainer:not(:first-child):not(:last-child) {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.progressbar-subcontainer h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+#wind-current-details {
+  width: 9rem !important;
+  position: relative;
+  left: 0.5rem;
+}
+.uv {
+  /* width: 200%; */
+}
+
+.progressbar-outside {
+  /* width: 6rem; */
+  /* position: relative;
+  bottom: 9rem;
+  left: 19rem; */
+}
+
+.sub {
+  /* width: 4.5rem; */
+}

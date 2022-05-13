@@ -10,11 +10,7 @@ const Current = () => {
   const weatherData = useSelector((state) => state.weather.data);
   const unit = useSelector((state) => state.units.unit);
   const dispatch = useDispatch();
-
-  console.log("unit:", unit);
-  //console.log(weatherData.current.dt);
-
-  //console.log("time", time);
+  const locationNameLength = locationName.length;
 
   function setUnit(unit) {
     if (unit === "metric") {
@@ -26,10 +22,17 @@ const Current = () => {
     }
   }
 
+  console.log("Length:", locationNameLength);
+
   console.log("weather data!~:", weatherData);
   return (
-    <div className="main-container">
-      <p className="location">{locationName}</p>
+    <div className="main-container-current">
+      {locationNameLength >= 22 ? (
+        <p className="location-small">{locationName}</p>
+      ) : (
+        <p className="location-large">{locationName}</p>
+      )}
+
       <div className="top">
         <div className="main-image">
           <img
@@ -39,12 +42,13 @@ const Current = () => {
           />
         </div>
 
-        <h1 className="temp">{Math.floor(weatherData.current.temp)}°</h1>
-        <div className="units-container">
+        <p className="temp">{Math.floor(weatherData.current.temp)}°</p>
+
+        <div className="units-supercontainer">
           {unit === "metric" ? (
-            <div>
+            <div className="units-container">
               <div className="unit active" id="C">
-                <h2>C</h2>
+                <p>C</p>
               </div>
 
               <div
@@ -52,15 +56,13 @@ const Current = () => {
                 id="F"
                 onClick={() => setUnit("imperial")}
               >
-                <h2>F</h2>
+                <p>F</p>
               </div>
-
-              <div className="background"></div>
             </div>
           ) : (
-            <div>
+            <div className="units-container">
               <div className="unit active" id="F">
-                <h2>F</h2>
+                <p>F</p>
               </div>
 
               <div
@@ -68,22 +70,21 @@ const Current = () => {
                 id="C"
                 onClick={() => setUnit("metric")}
               >
-                <h2>C</h2>
+                <p>C</p>
               </div>
-
-              <div className="background"></div>
             </div>
           )}
         </div>
       </div>
+
       <div className="bottom">
         <h2 className="description">
           {weatherData.current.weather[0].description[0].toUpperCase()}
           {weatherData.current.weather[0].description.substring(1)}
         </h2>
-        <h4 className="timestamp">
+        <p className="timestamp">
           Updated as of {convertTime(weatherData.current.dt, "HH-MM")}
-        </h4>
+        </p>
         <div className="bottom-icons">
           <div className="icons" id="top-icons">
             <div className="icon-element">

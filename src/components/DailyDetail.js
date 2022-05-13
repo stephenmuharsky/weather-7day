@@ -12,8 +12,8 @@ const DailyDetail = ({ data }) => {
         <img
           src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
           alt="Weather icon"
-          classname="icon"
-          id="picture"
+          classname="daily-icon"
+          id="daily-picture"
         />
       </div>
 
@@ -22,7 +22,7 @@ const DailyDetail = ({ data }) => {
         <span className="temp-min">{Math.floor(data.temp.min)}°</span>
       </p>
 
-      <p className="weather" id="weather">
+      <p className="day-weather" id="day-weather">
         {data.weather[0].main}
       </p>
     </div>

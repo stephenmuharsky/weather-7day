@@ -11,15 +11,15 @@ const HourlyDetail = ({ data }) => {
       <img
         src={`https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`}
         alt="Weather icon"
-        classname="icon"
-        id="icon"
+        classname="hourly-icon"
+        id="hourly-icon"
       />
 
-      <p className="temps" id="tempmax">
-        <span className="temp">{Math.floor(data.temp)}°</span>{" "}
+      <p className="hourly-temp" id="hourly-tempmax">
+        <span className="hourly-temp-span">{Math.floor(data.temp)}°</span>
       </p>
 
-      <p className="weather" id="weather2">
+      <p className="hourly-weather" id="hourly-weather">
         {data.weather[0].main}
       </p>
     </div>

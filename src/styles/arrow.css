@@ -1,0 +1,12 @@
+.wind-container {
+  width: 6.5rem;
+  margin-top: 0;
+  /* position: relative;
+  bottom: 2rem; */
+  margin-left: 1rem;
+}
+
+.wind-direction-icon {
+  object-fit: cover;
+  width: 6.5rem;
+}

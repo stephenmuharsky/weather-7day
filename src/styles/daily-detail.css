@@ -7,24 +7,29 @@
 }
 
 .day-element:not(:first-child, :last-child) {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .day-element {
   height: 10rem;
+  position: relative;
+  left: 1rem;
 }
 
 .temps {
   margin-bottom: 0;
   margin-top: 0;
+  position: relative;
+  left: 0px;
+  bottom: 5px;
 }
 
 .weather {
   margin-top: 0;
 }
 
-.icon {
+.daily-icon {
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -33,11 +38,13 @@
   margin-bottom: 0;
   position: relative;
   bottom: 10px;
+  left: 10px;
 }
 
-#picture {
+#daily-picture {
   position: relative;
-  bottom: 20px;
+  right: 12px;
+  bottom: 25px;
 }
 
 .temp-max {
@@ -53,7 +60,8 @@
   bottom: 15px;
 }
 
-#weather {
+#day-weather {
   position: relative;
-  bottom: 45px;
+  bottom: 90px;
+  left: 20px;
 }

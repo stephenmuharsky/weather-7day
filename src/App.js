@@ -9,7 +9,7 @@ import Current from "./components/Current";
 import Searchbar from "./components/Searchbar";
 import Daily from "./components/Daily";
 import Hourly from "./components/Hourly";
-import DailyDetails from "./components/DailyDetails";
+import CurrentDetail from "./components/CurrentDetail";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,43 +22,9 @@ function App() {
   );
   const units = useSelector((state) => state.units.unit);
 
-  // const [locationChars, setLocationChars] = useState("");
-  //console.log(locationData);
-  //console.log("location name", locationName);
-  // let inputRef = useRef();
-  // const handleSelect = (locationChars) => {
-  //   //console.log("location", locationChars);
-  //   const newName = {
-  //     name: locationChars,
-  //   };
-  //   dispatch(locationNameActions.setLocationName(newName));
-  //   //console.log(locationName);
-  //   geocodeByAddress(locationChars)
-  //     .then((results) => getLatLng(results[0]))
-  //     .then(
-  //       (latLng) =>
-  //         dispatch(
-  //           locationDataActions.setLocationData({
-  //             lat: latLng.lat,
-  //             lon: latLng.lng,
-  //             loaded: true,
-  //           })
-  //         ),
-  //       console.log("location data state", locationData)
-  //     )
-  //     .catch((error) => console.error("Error", error));
-  //   setLocationChars("");
-  // };
-
-  // const handleChange = (text) => {
-  //   setLocationChars(text);
-  // };
-
   useGeoLocation();
 
   useEffect(() => {
-    // switch (weatherMain) {
-
     if (weatherMain === "01d") {
       setBackgroundUrl("/blue.jpg");
     } else if (weatherMain === "01n") {
@@ -72,7 +38,7 @@ function App() {
     } else if (weatherMain === "03n") {
       setBackgroundUrl("/grey.png");
     } else if (weatherMain === "04d") {
-      setBackgroundUrl("/grey.png");
+      setBackgroundUrl("/grey.jpg");
     } else if (weatherMain === "04n") {
       setBackgroundUrl("/grey.png");
     } else if (weatherMain === "09d") {
@@ -103,8 +69,6 @@ function App() {
   }, [locationData]);
 
   useEffect(() => {
-    //console.log("location data: ", locationData.lat);
-    //console.log("location data: ", locationData.lon);
     if (locationData.lat != null) {
       console.log("fetching the weather...");
       dispatch(fetchWeatherData(locationData.lat, locationData.lon, units));
@@ -131,10 +95,10 @@ function App() {
       <Searchbar />
 
       {locationData.loaded && weatherData.received ? (
-        <div className="main-container">
+        <div className="main-container-app">
           <div className="column left">
             <Current />
-            <DailyDetails />
+            <CurrentDetail />
           </div>
           <div className="column right">
             <Daily />
@@ -142,42 +106,12 @@ function App() {
           </div>
         </div>
       ) : (
-        // <div>
-        //   Location name: {locationName}
-        //   Location: Latitude: {locationData.lat} longitude: {locationData.lon}
-        // </div>
-        "Location data not available yet."
+        <div className="main-container-error">
+          <h2>An error occured</h2>
+          <p id="instruction">Try refreshing?</p>
+          <p id="refresh">Refresh this page</p>
+        </div>
       )}
-
-      {/* <PlacesAutocomplete
-        value={locationChars}
-        onSelect={handleSelect}
-        searchOptions={{ types: ["(cities)"] }}
-        onChange={handleChange}
-      >
-        {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div className="search">
-            <input
-              ref={inputRef}
-              {...getInputProps({ placeholder: "Search Location" })}
-              className="search-input"
-            />
-            <div className="suggestions-container">
-              {loading ? <div>Loading...</div> : null}
-              {suggestions.map((suggestion) => {
-                const style = {
-                  backgroundColor: suggestion.active ? "#41b6e6" : "white",
-                };
-                return (
-                  <div {...getSuggestionItemProps(suggestion, { style })}>
-                    {suggestion.description}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-      </PlacesAutocomplete> */}
     </div>
   );
 }

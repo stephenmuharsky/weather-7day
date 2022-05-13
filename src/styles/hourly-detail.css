@@ -1,18 +1,24 @@
-.temps {
+.hourly-temp {
   position: relative;
-  bottom: 30px;
+  bottom: 35px;
+  left: 30px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-#weather2 {
+#hourly-weather {
   position: relative;
-  bottom: 60px;
+  bottom: 105px;
+  left: 30px;
 }
 
 .hour-element:hover {
   background: rgba(0, 0, 0, 0.1);
 }
 
-#icon {
+#hourly-icon {
   position: relative;
   bottom: 36px;
 }
@@ -34,4 +40,5 @@
 .hour {
   position: relative;
   bottom: 10px;
+  left: 25px;
 }
